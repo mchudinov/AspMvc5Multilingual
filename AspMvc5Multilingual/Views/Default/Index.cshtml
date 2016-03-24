@@ -1,6 +1,10 @@
 ﻿@model AspMvc5Multilingual.Models.Widget
 
+@Html.ActionLink("Menu with tooltip", "Index", "Default", null, new { title = "Tooltip help" })
+<br />
+
+<div style="background: silver">
 Language: @ViewBag.Language<br />
 Money: @($"{Model.Money:c0}") <br/>
 Date and Time: @Model.DateTime.ToString("F") <br />
-
+</div>
