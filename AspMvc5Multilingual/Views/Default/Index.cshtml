@@ -1,6 +1,6 @@
 ﻿@model AspMvc5Multilingual.Models.Widget
 
 Language: @ViewBag.Language<br />
-Random money: @Model.Money <br />
-DateTime: @Model.DateTime <br />
+Money: @($"{Model.Money:c0}") <br/>
+Date and Time: @Model.DateTime.ToString("F") <br />
 

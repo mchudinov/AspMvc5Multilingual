@@ -8,7 +8,7 @@ namespace AspMvc5Multilingual.Controllers
     {
         public ActionResult Index()
         {
-            var widget = new Widget { Money = (new Random().Next(1, 100000)) / 10.0 };
+            var widget = new Widget { Money = (new Random().Next(1, 100000)) };
             ViewBag.Language = CurrentLanguageCode;
             return View(widget);
         }
