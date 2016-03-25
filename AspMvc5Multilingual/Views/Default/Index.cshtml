@@ -1,10 +1,25 @@
 ﻿@model AspMvc5Multilingual.Models.Widget
 
-@Html.ActionLink("Menu with tooltip", "Index", "Default", null, new { title = "Tooltip help" })
-<br />
+@Html.ActionLink("Main Menu", "Index", "Default", null, new { title = "Tooltip help" })
+
+<br/>
+<br/>
 
 <div style="background: silver">
-Language: @ViewBag.Language<br />
-Money: @($"{Model.Money:c0}") <br/>
-Date and Time: @Model.DateTime.ToString("F") <br />
+    Language: @ViewBag.Language<br/>
+    Money: @($"{Model.Money:c0}") <br/>
+    Date and Time: @Model.DateTime.ToString("F") <br/>
 </div>
+
+<br/>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, "")
+    <div>
+        @Html.LabelFor(model => model.Name, "Label text")
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name, "")
+    </div>
+    <input type="submit" value="Submit and test error messages" />
+}

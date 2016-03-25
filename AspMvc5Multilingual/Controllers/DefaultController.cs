@@ -6,10 +6,10 @@ namespace AspMvc5Multilingual.Controllers
 {
     public class DefaultController : BaseController
     {
-        public ActionResult Index()
+        public ActionResult Index(Widget w)
         {
-            var widget = new Widget { Money = (new Random().Next(1, 100000)) };
             ViewBag.Language = CurrentLanguageCode;
+            var widget = new Widget {Money = (new Random().Next(1, 100000))};
             return View(widget);
         }
     }
