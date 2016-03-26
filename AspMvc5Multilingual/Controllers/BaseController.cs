@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Threading;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -7,18 +8,23 @@ namespace AspMvc5Multilingual.Controllers
 {
     public abstract class BaseController : Controller
     {
-        public string CurrentLanguageCode { get; protected set; }
+        private string CurrentLanguageCode { get; set; }
 
         protected override void Initialize(RequestContext requestContext)
         {
             if (requestContext.RouteData.Values["lang"] != null && requestContext.RouteData.Values["lang"] as string != "null")
             {
-                CurrentLanguageCode = requestContext.RouteData.Values["lang"] as string;
+                CurrentLanguageCode = (string)requestContext.RouteData.Values["lang"];
                 if (CurrentLanguageCode != null)
                 {
-                    var ci = new CultureInfo(CurrentLanguageCode);
-                    Thread.CurrentThread.CurrentUICulture = ci;
-                    Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(ci.Name);
+                    try
+                    {
+                        Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(CurrentLanguageCode);
+                    }
+                    catch (Exception)
+                    {
+                        throw new NotSupportedException($"ERROR: Invalid language code '{CurrentLanguageCode}'.");
+                    }
                 }
             }
             base.Initialize(requestContext);

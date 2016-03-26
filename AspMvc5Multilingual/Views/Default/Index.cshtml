@@ -17,7 +17,7 @@
 {
     @Html.ValidationSummary(false, "")
     <div>
-        @Html.LabelFor(model => model.Name, "Label text")
+        @Html.LabelFor(model => model.Name, GlobalRes.Label_text)
         @Html.EditorFor(model => model.Name)
         @Html.ValidationMessageFor(model => model.Name, "")
     </div>
