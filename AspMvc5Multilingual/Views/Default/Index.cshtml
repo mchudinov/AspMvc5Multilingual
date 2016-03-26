@@ -1,14 +1,14 @@
 ﻿@model AspMvc5Multilingual.Models.Widget
 
-@Html.ActionLink("Main Menu", "Index", "Default", null, new { title = "Tooltip help" })
+@Html.ActionLink(GlobalRes.MainMenu, "Index", "Default", null, new { title = GlobalRes.Tooltip_help })
 
 <br/>
 <br/>
 
 <div style="background: silver">
-    Language: @ViewBag.Language<br/>
-    Money: @($"{Model.Money:c0}") <br/>
-    Date and Time: @Model.DateTime.ToString("F") <br/>
+    @GlobalRes.Language: @ViewBag.Language<br/>
+    @GlobalRes.Money: @($"{Model.Money:c0}") <br/>
+    @GlobalRes.DateAndTime: @Model.DateTime.ToString("F") <br/>
 </div>
 
 <br/>
@@ -21,5 +21,5 @@
         @Html.EditorFor(model => model.Name)
         @Html.ValidationMessageFor(model => model.Name, "")
     </div>
-    <input type="submit" value="Submit and test error messages" />
+    <input type="submit" value="@GlobalRes.Submit_and_test_error_messages" />
 }

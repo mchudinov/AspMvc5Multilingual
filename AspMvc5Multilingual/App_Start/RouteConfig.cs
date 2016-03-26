@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace AspMvc5Multilingual
@@ -17,7 +13,7 @@ namespace AspMvc5Multilingual
                 name: "Language",
                 url: "{lang}/{controller}/{action}/{id}",
                 defaults: new { controller = "Default", action = "Index", id = UrlParameter.Optional },
-                constraints: new { lang = @"ru|en" }
+                constraints: new { lang = @"ru|en|no" }
             );
 
             routes.MapRoute(
