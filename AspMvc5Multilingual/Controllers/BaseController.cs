@@ -23,7 +23,7 @@ namespace AspMvc5Multilingual.Controllers
                     }
                     catch (Exception)
                     {
-                        throw new NotSupportedException($"ERROR: Invalid language code '{CurrentLanguageCode}'.");
+                        throw new NotSupportedException($"Invalid language code '{CurrentLanguageCode}'.");
                     }
                 }
             }

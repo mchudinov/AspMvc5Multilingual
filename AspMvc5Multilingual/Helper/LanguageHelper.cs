@@ -3,7 +3,7 @@ using System.Web.Routing;
 
 namespace AspMvc5Multilingual.Helper
 {
-    public static class LangHelper
+    public static class LanguageHelper
     {
         public static MvcHtmlString LangSwitcher(this UrlHelper url, string Name, RouteData routeData, string lang)
         {

@@ -25,7 +25,7 @@ namespace AspMvc5Multilingual.Attributes
                 }
                 catch (Exception)
                 {
-                    throw new NotSupportedException($"ERROR: Invalid language code '{lang}'.");
+                    throw new NotSupportedException($"Invalid language code '{lang}'.");
                 }
             }
         }
