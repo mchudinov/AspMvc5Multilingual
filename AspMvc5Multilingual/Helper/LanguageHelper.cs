@@ -5,7 +5,7 @@ namespace AspMvc5Multilingual.Helper
 {
     public static class LanguageHelper
     {
-        public static MvcHtmlString LangSwitcher(this UrlHelper url, string Name, RouteData routeData, string lang)
+        public static MvcHtmlString LangSwitcher(this UrlHelper url, string name, RouteData routeData, string lang)
         {
             var liTagBuilder = new TagBuilder("li");
             var aTagBuilder = new TagBuilder("a");
@@ -22,7 +22,7 @@ namespace AspMvc5Multilingual.Helper
                 }
             }
             aTagBuilder.MergeAttribute("href", url.RouteUrl(routeValueDictionary));
-            aTagBuilder.SetInnerText(Name);
+            aTagBuilder.SetInnerText(name);
             liTagBuilder.InnerHtml = aTagBuilder.ToString();
             return new MvcHtmlString(liTagBuilder.ToString());
         }
