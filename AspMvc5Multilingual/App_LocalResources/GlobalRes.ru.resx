@@ -120,6 +120,9 @@
   <data name="DateAndTime" xml:space="preserve">
     <value>Дата и время</value>
   </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Дата и время</value>
+  </data>
   <data name="Label_text" xml:space="preserve">
     <value>Поле ввода</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="Must_contain_only_letters" xml:space="preserve">
     <value>Поле должно содержать только буквы a-z, цифры и символ педчёркивания _</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
   </data>
   <data name="Submit_and_test_error_messages" xml:space="preserve">
     <value>Отправить данные и протестировать сообщения об ошибках</value>

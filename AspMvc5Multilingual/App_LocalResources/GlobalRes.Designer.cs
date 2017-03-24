@@ -70,6 +70,15 @@ namespace AspMvc5Multilingual.App_LocalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date and time.
+        /// </summary>
+        public static string DateTime {
+            get {
+                return ResourceManager.GetString("DateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Label text.
         /// </summary>
         public static string Label_text {
@@ -120,6 +129,15 @@ namespace AspMvc5Multilingual.App_LocalResources {
         public static string Must_contain_only_letters {
             get {
                 return ResourceManager.GetString("Must_contain_only_letters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         

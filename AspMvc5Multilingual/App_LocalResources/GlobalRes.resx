@@ -120,6 +120,9 @@
   <data name="DateAndTime" xml:space="preserve">
     <value>Date and Time</value>
   </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Date and time</value>
+  </data>
   <data name="Label_text" xml:space="preserve">
     <value>Label text</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="Must_contain_only_letters" xml:space="preserve">
     <value>Field must contain only letters a-z, numbers and underscore _</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="Submit_and_test_error_messages" xml:space="preserve">
     <value>Submit and test error messages</value>

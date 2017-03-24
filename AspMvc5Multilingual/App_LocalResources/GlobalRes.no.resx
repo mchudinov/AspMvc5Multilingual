@@ -120,6 +120,9 @@
   <data name="DateAndTime" xml:space="preserve">
     <value>Dato og tid</value>
   </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Dato og tid</value>
+  </data>
   <data name="Label_text" xml:space="preserve">
     <value>Label tekst</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="Must_contain_only_letters" xml:space="preserve">
     <value>Dette feltet kan ha kun bokstaver a-z, tall og underscore _ </value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Navn</value>
   </data>
   <data name="Submit_and_test_error_messages" xml:space="preserve">
     <value>Send og test feil meldinger</value>
